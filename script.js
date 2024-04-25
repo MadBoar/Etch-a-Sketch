@@ -10,7 +10,7 @@ function screenInit() {
 }
 
 function hoverToggle() {
-    console.log(1)
+    this.classList.toggle("hover");
 }
 
 screenInit();
@@ -20,9 +20,7 @@ const grid = document.querySelectorAll(".cell")
 const handlerEvents = ['mouseover', 'mouseout'];
 handlerEvents.forEach(ev => {
     grid.forEach(el => {
-        el.addEventListener(`${ev}`, function(e) {
-            this.classList.toggle("hover");
-        });
+        el.addEventListener(`${ev}`, hoverToggle.bind(el));
     });
 });
 
