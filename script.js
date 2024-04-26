@@ -33,7 +33,7 @@ function screenInit(count = 16) {
 screenInit();
 
 function hoverToggle() {
-    this.classList.toggle("hover");
+    this.classList.toggle("hover-trail");
 }
 
 const pixelInput = document.querySelector("input");

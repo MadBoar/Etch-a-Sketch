@@ -22,9 +22,13 @@ body {
     min-width: 1px;
     min-height: 1px;
     transition: 0.5s linear all;
+    border-color: skyblue;
+    opacity: 0;
+
 }
 
-.hover {
+.hover-trail {
     background-color: skyblue;
+    opacity: 100;
     transition: none;
 }
