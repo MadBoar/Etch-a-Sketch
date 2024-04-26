@@ -6,23 +6,25 @@ body {
     align-items: center;
 }
 
+.grid-options {
+    margin-top: 10px;
+}
+
 .grid-container{
-    width: 106px;
+    width: 450px;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
 }
 
 .cell {
-    width: 20px;
-    height: 20px;
-    border: 2px solid black;
+    min-width: 1px;
+    min-height: 1px;
     transition: 0.5s linear all;
-    
 }
 
 .hover {
     background-color: skyblue;
-    transition: background-color 1s linear;
     transition: none;
 }
