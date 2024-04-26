@@ -27,8 +27,8 @@ body {
 
 }
 
-.hover-trail {
+.cell:hover {
     background-color: skyblue;
-    opacity: 100;
+    opacity: 1;
     transition: none;
 }

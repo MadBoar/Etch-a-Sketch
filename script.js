@@ -1,15 +1,4 @@
 
-//mouse over event listener
-function cellEventHandler (){
-    const grid = document.querySelectorAll(".cell")
-    const handlerEvents = ['mouseover', 'mouseout'];
-    handlerEvents.forEach(ev => {
-        grid.forEach(el => {
-            el.addEventListener(`${ev}`, hoverToggle.bind(el));
-        });
-    });
-}
-
 function screenInit(count = 16) {
     const container = document.querySelector(".grid-container");
     const gridCell = document.createElement("div");
@@ -28,13 +17,8 @@ function screenInit(count = 16) {
     for(let i = 0; i < pixelCount; i++){
         container.appendChild(gridCell.cloneNode(true));
     }
-    cellEventHandler();
 }
 screenInit();
-
-function hoverToggle() {
-    this.classList.toggle("hover-trail");
-}
 
 const pixelInput = document.querySelector("input");
 
