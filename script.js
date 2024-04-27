@@ -1,4 +1,19 @@
 
+function outHandler() {
+
+    this.style.backgroundColor = "rgba(135,206,235,1)"
+    
+};
+
+//mouse over event listener
+function cellEventHandler (){
+    const grid = document.querySelectorAll(".cell")
+    
+    grid.forEach(el => {
+        el.addEventListener('mouseover', outHandler.bind(el));
+    });
+};
+
 function screenInit(count = 16) {
     const container = document.querySelector(".grid-container");
     const gridCell = document.createElement("div");
@@ -16,9 +31,14 @@ function screenInit(count = 16) {
     
     for(let i = 0; i < pixelCount; i++){
         container.appendChild(gridCell.cloneNode(true));
-    }
-}
+    };
+    cellEventHandler();
+};
+
 screenInit();
+
+
+
 
 const pixelInput = document.querySelector("input");
 
@@ -26,4 +46,4 @@ const pixelInput = document.querySelector("input");
 document.querySelector("button").addEventListener('click', () => {
     const pixelCount = pixelInput.value;
     screenInit(pixelCount);
-})
+});

@@ -28,6 +28,7 @@ body {
 }
 
 .cell:hover {
+    /* 135,206, 235*/
     background-color: skyblue;
     opacity: 1;
     transition: none;
